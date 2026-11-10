@@ -1,0 +1,26 @@
+bx_BAT EQ - prototype (macOS, Apple Silicon + Intel)
+
+Install
+1. Right-click install.command and choose Open (macOS asks once because the file is unsigned).
+   It copies the VST3 and AU into your user plug-in folders and clears the download quarantine.
+2. In Ableton: Settings > Plug-ins > make sure "Use VST3 Plug-in System Folders" is on, then Rescan.
+3. Find "bx_BAT EQ" under Plug-ins > Brainworx Prototype and drop it on your master or a bus.
+
+Use
+1. Pick an engineer mode on the right: Neutral, Clearmountain, Hardwell or Brainworx.
+2. Press BAT and play the loudest part of the track. BAT needs 8 seconds of audio and pauses
+   while the track is silent. Click BAT again to cancel.
+3. BAT loads its suggestion into slot C and shows what it heard. Your own setting stays in A.
+   Knobs that BAT moved glow blue. With Level match on, C is set to the same loudness as A,
+   so you compare tone, not volume.
+4. Press Hear A / Hear C (or the A and C buttons at the top) to compare.
+   Switch modes to hear another suggestion for the same audio.
+5. Keep it, tweak it, or Dismiss it to go back to A.
+
+The graph shows what BAT heard (grey), the mode's target (dashed), the EQ (blue)
+and the result (white).
+
+Notes
+- The EQ is a clean digital 5-band EQ laid out like the AMEK EQ 250. It is not the AMEK model.
+- The engineer modes use placeholder target curves. They are not the engineers' own settings.
+- This is an unsigned prototype build for internal testing.

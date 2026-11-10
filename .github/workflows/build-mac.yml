@@ -1,0 +1,83 @@
+name: Build macOS plugin
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: |
+          cmake -S . -B build \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
+            -DBX_BUILD_TESTS=ON 2>&1 | tee build-log.txt
+
+      - name: Build VST3 + AU + tests
+        run: |
+          set -o pipefail
+          cmake --build build --config Release -j 4 --target BxBat_VST3 BxBat_AU BatTest 2>&1 | tee -a build-log.txt
+
+      - name: BAT analysis tests
+        run: |
+          set -o pipefail
+          build/BatTest_artefacts/Release/BatTest 2>&1 | tee -a build-log.txt
+
+      - name: Sign (ad-hoc) and package
+        run: |
+          set -e
+          A=build/BxBat_artefacts/Release
+          codesign --force --deep -s - "$A/VST3/bx_BAT EQ.vst3"
+          codesign --force --deep -s - "$A/AU/bx_BAT EQ.component"
+          mkdir -p dist/bx_BAT_EQ
+          cp -R "$A/VST3/bx_BAT EQ.vst3" dist/bx_BAT_EQ/
+          cp -R "$A/AU/bx_BAT EQ.component" dist/bx_BAT_EQ/
+          cp INSTALL.txt dist/bx_BAT_EQ/
+          cp install.command dist/bx_BAT_EQ/
+          chmod +x dist/bx_BAT_EQ/install.command
+          cd dist && ditto -c -k --sequesterRsrc --keepParent bx_BAT_EQ bx_BAT_EQ_mac.zip
+
+      - name: Validate the Audio Unit
+        continue-on-error: true
+        run: |
+          mkdir -p ~/Library/Audio/Plug-Ins/Components
+          cp -R "build/BxBat_artefacts/Release/AU/bx_BAT EQ.component" ~/Library/Audio/Plug-Ins/Components/
+          killall -9 AudioComponentRegistrar 2>/dev/null || true
+          sleep 3
+          auval -v aufx Bxbt Bxpr 2>&1 | tee auval-log.txt | tail -40
+          echo "--- auval summary ---" >> build-log.txt
+          tail -5 auval-log.txt >> build-log.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bx_BAT_EQ_mac
+          path: dist/bx_BAT_EQ_mac.zip
+
+      - name: Publish to the builds branch
+        if: always()
+        run: |
+          set -e
+          mkdir -p /tmp/pub
+          cp build-log.txt /tmp/pub/ 2>/dev/null || echo "no log" > /tmp/pub/build-log.txt
+          cp auval-log.txt /tmp/pub/ 2>/dev/null || true
+          cp dist/bx_BAT_EQ_mac.zip /tmp/pub/ 2>/dev/null || true
+          echo "${GITHUB_SHA} ${{ job.status }}" > /tmp/pub/BUILD_INFO.txt
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git checkout --orphan builds-tmp
+          git rm -rf . -q
+          rm -rf build dist
+          cp /tmp/pub/* .
+          git add -A
+          git commit -q -m "Build ${GITHUB_SHA::7} (${{ job.status }})"
+          git push -f origin HEAD:builds
