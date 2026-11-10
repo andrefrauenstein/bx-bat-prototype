@@ -1,0 +1,154 @@
+-- The C compiler identification is AppleClang 17.0.0.17000013
+-- The CXX compiler identification is AppleClang 17.0.0.17000013
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (172.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/runner/work/bx-bat-prototype/bx-bat-prototype/build
+[  2%] Building CXX object CMakeFiles/BxBat.dir/Source/PluginProcessor.cpp.o
+[  5%] Building CXX object CMakeFiles/BxBat.dir/Source/BatAnalysis.cpp.o
+[  8%] Building CXX object CMakeFiles/juce_vst3_helper.dir/_deps/juce-src/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm.o
+[ 11%] Building CXX object CMakeFiles/BxBat.dir/Source/PluginEditor.cpp.o
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/Source/PluginProcessor.cpp:103:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  103 |         if (! filtersDirty && n.gainDb == l.gainDb && n.freq == l.freq && n.q == l.q)
+      |                               ~~~~~~~~ ^  ~~~~~~~~
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/Source/PluginProcessor.cpp:103:62: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  103 |         if (! filtersDirty && n.gainDb == l.gainDb && n.freq == l.freq && n.q == l.q)
+      |                                                       ~~~~~~ ^  ~~~~~~
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/Source/PluginProcessor.cpp:103:79: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  103 |         if (! filtersDirty && n.gainDb == l.gainDb && n.freq == l.freq && n.q == l.q)
+      |                                                                           ~~~ ^  ~~~
+3 warnings generated.
+[ 13%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
+[ 16%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
+[ 19%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/Source/PluginProcessor.cpp:103:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  103 |         if (! filtersDirty && n.gainDb == l.gainDb && n.freq == l.freq && n.q == l.q)
+      |                               ~~~~~~~~ ^  ~~~~~~~~
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/Source/PluginProcessor.cpp:103:62: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  103 |         if (! filtersDirty && n.gainDb == l.gainDb && n.freq == l.freq && n.q == l.q)
+      |                                                       ~~~~~~ ^  ~~~~~~
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/Source/PluginProcessor.cpp:103:79: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  103 |         if (! filtersDirty && n.gainDb == l.gainDb && n.freq == l.freq && n.q == l.q)
+      |                                                                           ~~~ ^  ~~~
+3 warnings generated.
+[ 22%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o
+[ 25%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o
+[ 27%] Linking CXX executable juce_vst3_helper
+[ 27%] Built target juce_vst3_helper
+[ 30%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+In file included from /Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+In file included from /Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:187:
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1636:23: warning: variable 'target' set but not used [-Wunused-but-set-variable]
+ 1636 |             if (auto* target = findCurrentTextInputTarget())
+      |                       ^
+[ 33%] Building C object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[ 36%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o
+[ 38%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o
+[ 41%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_core/juce_core_CompilationTime.cpp.o
+[ 44%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o
+1 warning generated.
+In file included from /Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm:35:
+In file included from /Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.cpp:187:
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/_deps/juce-src/modules/juce_gui_basics/native/juce_NSViewComponentPeer_mac.mm:1636:23: warning: variable 'target' set but not used [-Wunused-but-set-variable]
+ 1636 |             if (auto* target = findCurrentTextInputTarget())
+      |                       ^
+[ 47%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o
+[ 50%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o
+[ 52%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o
+[ 55%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o
+[ 58%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o
+[ 61%] Building CXX object CMakeFiles/BxBat.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o
+1 warning generated.
+[ 63%] Linking CXX static library "BxBat_artefacts/Release/libbx_BAT EQ_SharedCode.a"
+[ 63%] Built target BxBat
+[ 66%] Generating BxBat_artefacts/JuceLibraryCode/BxBat_VST3/PkgInfo
+[ 69%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[ 72%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[ 75%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[ 77%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[ 80%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
+[ 83%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
+[ 86%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
+[ 88%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
+[ 91%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
+[ 94%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
+[ 97%] Building CXX object CMakeFiles/BxBat_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
+[100%] Linking CXX CFBundle shared module "BxBat_artefacts/Release/VST3/bx_BAT EQ.vst3/Contents/MacOS/bx_BAT EQ"
+/Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/BxBat_artefacts/Release/VST3/bx_BAT EQ.vst3: code object is not signed at all
+In architecture: x86_64
+-- Replacing invalid signature with ad-hoc signature
+removing moduleinfo.json
+creating /Users/runner/work/bx-bat-prototype/bx-bat-prototype/build/BxBat_artefacts/Release/VST3/bx_BAT EQ.vst3/Contents/Resources/moduleinfo.json
+[100%] Built target BxBat_VST3
+[ 61%] Built target BxBat
+[ 64%] Generating BxBat_artefacts/JuceLibraryCode/BxBat_AU/PkgInfo
+[ 67%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[ 70%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[ 76%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[ 76%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[ 82%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
+[ 82%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
+[ 85%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
+[ 88%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
+[ 91%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
+[ 94%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
+[ 97%] Building CXX object CMakeFiles/BxBat_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
+[100%] Linking CXX CFBundle shared module "BxBat_artefacts/Release/AU/bx_BAT EQ.component/Contents/MacOS/bx_BAT EQ"
+[100%] Built target BxBat_AU
+[ 25%] Building CXX object CMakeFiles/BatTest.dir/tests/BatTest.cpp.o
+[ 25%] Building CXX object CMakeFiles/BatTest.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o
+[ 50%] Building CXX object CMakeFiles/BatTest.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o
+[ 50%] Building CXX object CMakeFiles/BatTest.dir/Source/BatAnalysis.cpp.o
+[ 62%] Building CXX object CMakeFiles/BatTest.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o
+[ 75%] Building CXX object CMakeFiles/BatTest.dir/_deps/juce-src/modules/juce_core/juce_core_CompilationTime.cpp.o
+[ 87%] Building CXX object CMakeFiles/BatTest.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o
+[100%] Linking CXX executable BatTest_artefacts/Release/BatTest
+[100%] Built target BatTest
+dark  rms -23.1 dBFS  crest 11.8 dB  heard: Boxy low mids, Dull top end
+  LO SHELF  -4.0 dB      45 Hz  Q 0.71
+  LOW       -1.5 dB     300 Hz  Q 0.50
+  MID       +1.5 dB    2400 Hz  Q 0.80
+  HIGH      +3.0 dB    7000 Hz  Q 0.50
+  HI SHELF  +4.0 dB    7000 Hz  Q 0.71
+  level change -1.45 dB
+bright  rms -20.9 dBFS  crest 12.8 dB  heard: Light low end, Bright top end
+  LO SHELF  +1.0 dB     160 Hz  Q 0.71
+  LOW       +1.5 dB     181 Hz  Q 0.50
+  MID       -0.5 dB    2400 Hz  Q 0.50
+  HIGH      -1.5 dB    7000 Hz  Q 0.50
+  HI SHELF  -4.0 dB    7662 Hz  Q 0.71
+  level change +0.29 dB
+PASS  noise is analysed
+PASS  silence gives no analysis
+PASS  dark signal heard as dull
+PASS  dark signal gets a top-end boost
+PASS  bright signal gets a top-end cut
+PASS  mode Neutral stays within limits
+PASS  mode Clearmountain stays within limits
+PASS  mode Hardwell stays within limits
+PASS  mode Brainworx stays within limits
+PASS  Hardwell mode adds more sub than Neutral
+All BAT checks passed.
+--- auval summary ---
+
+* * PASS
+--------------------------------------------------
+AU VALIDATION SUCCEEDED.
+--------------------------------------------------
